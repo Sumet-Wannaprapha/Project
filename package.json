@@ -1,0 +1,83 @@
+{
+  "name": "sharp-2021",
+  "version": "1.0.6",
+  "private": true,
+  "description": "ตัวสร้างเว็บไซต์ลากและวางด้วย bootstrap 5",
+  "main": "index.js",
+  "scripts": {
+    "dev": "mix",
+    "prod": "mix --production",
+    "watch": "mix watch",
+    "start": "electron index.js",
+    "sharp--p": "electron-builder --dir",
+    "sharp": "electron-builder"
+  },
+  "keywords": [
+    "Gramateria",
+    "gramateria",
+    "webite",
+    "grapejs",
+    "builder",
+    "drag and drop"
+  ],
+ 
+  "author": {
+    "name": "ตัวสร้างเว็บไซต์ลากและวางด้วย bootstrap 5",
+    "email": "sharp0637794267@gmail.com",
+    "url": "https://github.com/Peco-Peco"
+  },
+  "build": {
+    "productName": "Sharp",
+    "appId": "sharp",
+    "directories": {
+      "output": "export",
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "msi"
+      ],
+      "icon": "icons/icon.png"
+     
+    },
+    "mac": {
+      "icon": "icons/icon.icns"
+    },
+    "linux": {
+      "icon": "icons/icon.png",
+      "target": [
+        "deb",
+        "rpm",
+        "appimage",
+        "tar.gz"
+      ]
+    },
+    "nsis": {
+      "installerIcon": "icons/icon.ico",
+      "installerHeaderIcon": "icons/icon.ico",
+      "deleteAppDataOnUninstall": true
+    },
+    "files":[
+      "*.js",
+      "build",
+      "node_modules"
+    ]
+  
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "asar": "^0.14.6",
+    "electron": "^9.4.0",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "electron-builder": "^22.10.5"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "jszip": "^3.6.0",
+    "laravel-mix": "^6.0.25",
+    "notyf": "^3.10.0"
+  }
+}

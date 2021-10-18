@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>โปรแกรมออกแบบและพัฒนาเว็บไซต์ Website design and development program </title>
+    <meta
+      name="description"
+      content="A glitch effect using CSS animations and clip-path"
+    />
+    <meta name="keywords" content="glitch, effect, css, animations" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="base.css" />
+    <link rel="stylesheet" type="text/css" href="show.css" />
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert("ดูเหมือนว่าระบบจะไม่รองรับเบราว์เซอร์ในเวอร์ชันที่คุณใช้อยู่");
+    </script>
+  </head>
+  <body class="demo-2 loading">
+    <main>
+      <div class="message">
+        ดูเหมือนว่าระบบจะไม่รองรับเบราว์เซอร์ในเวอร์ชันที่คุณใช้อยู่
+      </div>
+
+      <div class="content">
+        <div class="glitch">
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+          <div class="glitch__img"></div>
+        </div>
+
+        <h2
+      
+          class="content__title animationClick"
+          onclick="window.location.href='./index.html'"
+        >
+          start
+       
+        </h2>
+  
+      </div>
+    </main>
+    <script src="imagesloaded.pkgd.min.js"></script>
+    <script src="show.js"></script>
+  </body>
+</html>
